@@ -13,7 +13,7 @@ FROM ubuntu:20.10
 
  RUN addgroup --gid $GROUP_ID user; exit 0
  RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID $USER_NAME; exit 0
- RUN echo "$USER_NAME:$USER_NAME" | chpasswd && adduser $USER_NAME sudo
+# RUN echo "$USER_NAME:$USER_NAME" | chpasswd && adduser $USER_NAME sudo
  RUN echo '----->'
  RUN echo 'root:Docker!' | chpasswd
  USER $USER_NAME
